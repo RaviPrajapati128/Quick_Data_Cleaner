@@ -167,6 +167,9 @@ st.markdown("""
 - ✅ Get instant feedback with success and warning messages, making data cleaning simple and interactive.  
 """)
 
+else:
+    st.warning("Drag a file here")
+
 
 
 
