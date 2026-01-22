@@ -155,9 +155,19 @@ if data is not None:
         if len(object_cols) > 0:
             st.warning(f"Skipped object columns: {list(object_cols)}")
 
+st.title("Quick Data Cleaner 🧹")
 
-    
-                
-else:
-    st.warning("Please upload a file.")
+st.subheader("Clean and preprocess your CSV datasets with ease!")
+
+st.markdown("### 📌 User Description")
+st.markdown("""
+- 🧹 **Quick Data Cleaner** is a Streamlit app that helps users clean and preprocess CSV datasets.  
+- 📊 Upload data, preview it instantly, and explore structure, null values, and quality metrics.  
+- 🗑️ Remove unwanted columns or rows with missing values in just one click.  
+- 🔄 Fill missing data using mean, median, mode, forward fill, or backward fill strategies.  
+- ✅ Get instant feedback with success and warning messages, making data cleaning simple and interactive.  
+""")
+
+
+
 
