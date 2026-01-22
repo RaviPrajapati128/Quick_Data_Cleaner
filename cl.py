@@ -155,6 +155,9 @@ if data is not None:
         if len(object_cols) > 0:
             st.warning(f"Skipped object columns: {list(object_cols)}")
 
+else:
+    st.warning("Please upload a file.")
+
 
 st.subheader("Clean and preprocess your CSV datasets with ease!")
 
@@ -167,8 +170,6 @@ st.markdown("""
 - ✅ Get instant feedback with success and warning messages, making data cleaning simple and interactive.  
 """)
 
-else:
-    st.warning("Drag a file here")
 
 
 
