@@ -3,6 +3,9 @@ import pandas as pd
 from sklearn.impute import SimpleImputer
 
 st.title("Quick Data Cleaner🧹")
+
+st.subheader("Clean and preprocess your CSV datasets with ease!")
+
 data = st.file_uploader(" ",type=["csv"])
 
 if data is not None:
@@ -165,9 +168,6 @@ if data is not None:
 
 else:
     st.warning("Please upload a file.")
-
-
-st.subheader("Clean and preprocess your CSV datasets with ease!")
 
 st.markdown("### 📌 User Description")
 st.markdown("""
