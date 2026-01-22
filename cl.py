@@ -134,7 +134,6 @@ if data is not None:
         avg(cos)
 
     cos = st.sidebar.multiselect("Fill Mode", list(df.columns))
-    st.sidebar.info("Use only numerical columns here")
     if not cos or type(cos) == "object": 
         st.write(" ")
     else:
