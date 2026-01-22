@@ -127,7 +127,6 @@ if data is not None:
         st.markdown("---")
     
     cos = st.sidebar.multiselect("Fill Mean", list(df.columns))
-    st.sidebar.info("Use only numerical columns here")
     if not cos:  
         numeric_cols = df[cos].select_dtypes(include=['number']).columns
         object_cols = df[cos].select_dtypes(include=['object']).columns
@@ -149,7 +148,6 @@ if data is not None:
         mod_e(cos)
 
     cos = st.sidebar.multiselect("Fill Median", list(df.columns))
-    st.sidebar.info("Use only numerical columns here")
     if not cos: 
         numeric_cols = df[cos].select_dtypes(include=['number']).columns
         object_cols = df[cos].select_dtypes(include=['object']).columns
