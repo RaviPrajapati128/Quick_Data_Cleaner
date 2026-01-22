@@ -127,19 +127,16 @@ if data is not None:
         st.markdown("---")
     
     cos = st.sidebar.multiselect("Fill Mean", list(df.columns))
-    if not cos:  
+    if cos:  
         numeric_cols = df[cos].select_dtypes(include=['number']).columns
         object_cols = df[cos].select_dtypes(include=['object']).columns
 
         if len(numeric_cols) > 0:
-            mod_e(numeric_cols)   # only pass numeric columns
-            st.success(f"Applied Fill Mode on: {list(numeric_cols)}")
+            avg(numeric_cols)   # only pass numeric columns
+            st.success(f"Applied Fill Mean on: {list(numeric_cols)}")
         if len(object_cols) > 0:
             st.warning(f"Skipped object columns: {list(object_cols)}")
 
-        st.write(" ")
-    else:
-        avg(cos)
 
     cos = st.sidebar.multiselect("Fill Mode", list(df.columns))
     if not cos : 
@@ -148,19 +145,17 @@ if data is not None:
         mod_e(cos)
 
     cos = st.sidebar.multiselect("Fill Median", list(df.columns))
-    if not cos: 
+    if cos: 
         numeric_cols = df[cos].select_dtypes(include=['number']).columns
         object_cols = df[cos].select_dtypes(include=['object']).columns
 
         if len(numeric_cols) > 0:
-            mod_e(numeric_cols)   # only pass numeric columns
-            st.success(f"Applied Fill Mode on: {list(numeric_cols)}")
+            media_n(numeric_cols)   # only pass numeric columns
+            st.success(f"Applied Fill Median on: {list(numeric_cols)}")
         if len(object_cols) > 0:
             st.warning(f"Skipped object columns: {list(object_cols)}")
 
-        st.write(" ")
-    else:
-        media_n(cos)
+
     
                 
 else:
