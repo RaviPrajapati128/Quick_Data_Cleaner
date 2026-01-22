@@ -155,7 +155,6 @@ if data is not None:
         if len(object_cols) > 0:
             st.warning(f"Skipped object columns: {list(object_cols)}")
 
-st.title("Quick Data Cleaner 🧹")
 
 st.subheader("Clean and preprocess your CSV datasets with ease!")
 
